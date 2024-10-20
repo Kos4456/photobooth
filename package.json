@@ -1,0 +1,32 @@
+{
+  "name": "react-polaroid-photo-deck",
+  "version": "2.0.0",
+  "description": "A beautiful polaroid style photo deck",
+  "keywords": [],
+  "homepage": "https://ikefakis.github.io/react-polaroid-photo-deck",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@react-spring/web": "^9.4.5",
+    "@use-gesture/react": "latest",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
