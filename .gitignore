@@ -1,2 +1,5 @@
 node_modules
 build
+public/img/
+src/backup_index.js.old
+uploads/

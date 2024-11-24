@@ -18,7 +18,7 @@ body {
 
 #photo-deck {
   /* Adding a background image */
-  background-image: url('/home/victor/Documents/casino/react-polaroid-photo-deck/casino_card_background_wallpaper_hd_1920x1080_by_giozaga_d7intx0.jpg'); /* Replace with your actual image path */
+  background-image: url('../casino_card_background_wallpaper_hd_1920x1080_by_giozaga_d7intx0.jpg'); /* Replace with your actual image path */
   background-size: cover; /* Ensures the background covers the whole deck */
   background-position: center center; /* Centers the background image */
   background-repeat: no-repeat; /* Prevents the background from repeating */
@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-wrap: wrap; /* Allows cards to wrap onto the next line */
   justify-content: center; /* Centers cards horizontally */
-  gap: 20px; /* Space between cards */
+ /* gap: 20px; /* Space between cards */
   padding: 20px; /* Padding around the container */
   position: absolute; /* Adjust as needed to fit your layout */
   width: 100%; /* Ensures the container takes the full width */
