@@ -11,6 +11,7 @@ const FETCHING_SPEED = 4000;
 
 const GRID_COLS = 6;
 const GRID_ROWS = 2;
+var img_cunt = 0;
 const TOTAL_TILES = GRID_COLS * GRID_ROWS;
 const tileWidth = window.innerWidth / GRID_COLS;
 const tileHeight = window.innerHeight / GRID_ROWS;
@@ -131,7 +132,10 @@ export default function Deck({ initialCards }) {
 
   const handleNewImage = (imageUrl) => {
     const newCard = { url: imageUrl, orientation: 'landscape' }; // Adjust orientation as needed
-  
+    img_cunt += 1;
+    if (img_cunt==9) {
+      window.location.reload();
+    }
     setCards((prevCards) => {
       const updatedCards = [...prevCards, newCard]; // Append the new card to the cards array
   
@@ -156,7 +160,33 @@ export default function Deck({ initialCards }) {
     });
   };
   
-
+  // const handleNewImage = (imageUrl) => {
+  //   const newCard = { url: imageUrl, orientation: 'landscape' }; // Adjust orientation as needed
+  
+  //   setCards((prevCards) => {
+  //     const updatedCards = [...prevCards, newCard]; // Append the new card to the cards array
+  
+  //     api.start((i) => {
+  //       // Calculate the new x and y positions with a modulo reset after 15 images
+  //       const resetIndex = i % 15; // Reset positions after every 15 images
+        
+  //       const x = deckCenterX - (15 / 2) * spreadX + resetIndex * spreadX; // Use modulo index for x
+  //       const y = deckCenterY - (15 / 2) * spreadY + resetIndex * spreadY; // Use modulo index for y
+  
+  //       return {
+  //         ...utils.to(i),
+  //         from: {
+  //           x, // Use calculated x position
+  //           y, // Use calculated y position
+  //           rot: 0,
+  //           scale: 1,
+  //         },
+  //       };
+  //     });
+  
+  //     return updatedCards; // Update the cards state
+  //   });
+  // };
 
   useEffect(() => {
     const checkForNewImages = async () => {
